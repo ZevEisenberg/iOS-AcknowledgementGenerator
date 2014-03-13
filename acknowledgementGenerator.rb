@@ -7,11 +7,11 @@ https://rubygems.org/gems/CFPropertyList
 
 
 Setup: (Default - Customize as you see fit)
-1. Create a 'licenses' directory  
-2. Put each license into that directory, one per file, with filenames that end .license
-3. Perform any necessary reformatting on the licenses. 
-   (eg. remove extra spaces at the beginning of lines, ensure that there are no line breaks mid-paragraph). 
-   There should be a blank line in-between each paragraph
+1. Create a 'licenses' directory
+2. Put each license into that directory, one per file, with filenames that end with .license
+3. Perform any necessary reformatting on the licenses.
+   (e.g. remove extra spaces at the beginning of lines, ensure that there are no line breaks mid-paragraph).
+   There should be a blank line between each paragraph.
 4. Edit your settings bundle Root.plist to include a child section called 'Acknowledgements'
 
 
@@ -27,7 +27,7 @@ If you want this script to run whenever you build your project, you can add a bu
 2. Select the target application
 3. Click the 'Build Phases' tab
 4. Now from the menu select: Editor > Add Build Phase > Add Run Script Build Phase
-5. Enter something like the folowing script: (modefy to suit your needs) 
+5. Enter something like the folowing script: (modefy to suit your needs)
 
 if gem list CFPropertyList -i; then
     ruby path/to/acknowledgementGenerator.rb "path/to/Settings.bundle" "path/to/licenses"
@@ -52,7 +52,7 @@ require 'CFPropertyList'
 
 # Quit unless script gets two arguments
 unless ARGV.length == 2
-  abort("Not the right number of arguments.\n" + 
+  abort("Not the right number of arguments.\n" +
         "Usage: ruby acknowledgementGenerator.rb \"path/to/Settings.bundle\" \"path/to/licenses/\"")
 end
 
